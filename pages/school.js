@@ -6,7 +6,7 @@ import Logo from '@/components/icons/Logo';
 import { useUser } from '@/utils/useUser';  
 import { useRouter } from 'next/router';
 
-const Post = () => {
+const School = () => {
     const [postData, setPost] = useState(null);
     const router = useRouter();
       useEffect(()=>{
@@ -51,4 +51,4 @@ const Post = () => {
 
 };
 
-export default Post;
+export default School;
