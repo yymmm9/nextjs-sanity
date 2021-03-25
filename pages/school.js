@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 const School = () => {
-    const [postData, setPost] = useState(null);
+    const [postData, setPostData] = useState(null);
     const router = useRouter();
     
       useEffect(()=>{
@@ -20,7 +20,7 @@ const School = () => {
                   alt
               }
           }`)
-          .then((data) => setPost(data))
+          .then((data) => setPostData(data))
           .catch(console.error)
       }, []);
     
