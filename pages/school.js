@@ -22,7 +22,7 @@ const School = () => {
               }
           }`)
           .then((data) => setPost(data))
-          .catch(console.error)
+        //   .catch(console.error)
       }, []);
     
       return(
