@@ -21,8 +21,8 @@ const Navbar = () => {
               </a>
             </Link>
             <nav className="space-x-2 ml-6 hidden lg:block">
-              <Link href="/">
-                <a className={s.link}>Pricing</a>
+              <Link href="/school">
+                <a className={s.link}>Lessons</a>
               </Link>
               <Link href="/account">
                 <a className={s.link}>Account</a>
