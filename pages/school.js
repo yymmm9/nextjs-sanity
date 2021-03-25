@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import sanityClient from '@/utils/client.js'
+import sanityClient from '@/utils/client.js';
 import React, { useState, useEffect } from 'react';
 
-import Logo from '@/components/icons/Logo';
 import { useRouter } from 'next/router';
 
 const School = () => {
@@ -22,7 +21,7 @@ const School = () => {
               }
           }`)
           .then((data) => setPost(data))
-        //   .catch(console.error)
+          .catch(console.error)
       }, []);
     
       return(
