@@ -1,6 +1,7 @@
 import Link from 'next/link';
+import sanityClient from '@/utils/client.js'
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Logo from '@/components/icons/Logo';
 import { useUser } from '@/utils/useUser';  
 import post from 'nextjssub/schemas/post';
