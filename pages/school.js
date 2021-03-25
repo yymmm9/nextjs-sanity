@@ -4,14 +4,11 @@ import sanityClient from '@/utils/client.js'
 import { useState, useEffect } from 'react';
 import Logo from '@/components/icons/Logo';
 import { useUser } from '@/utils/useUser';  
-import post from 'nextjssub/schemas/post';
+import { useRouter } from 'next/router';
 
 const Post = () => {
     const [postData, setPost] = useState(null);
-
-
-      
-
+    const router = useRouter();
       useEffect(()=>{
           sanityClient.fetch(`*[_type == "post"]{
               title,
@@ -25,7 +22,7 @@ const Post = () => {
               }
           }`)
           .then((data) => setPost(data))
-          .catch(console.error);
+          .catch(console.error).then(console.log(data))
       }, []);
     
       return(
