@@ -21,8 +21,8 @@ const Post = () => {
                   alt
               }
           }`)
-          .then((data) => setPost(data))
-          .catch(console.error).then(console.log(data))
+          .then((data) => setPost(data)).then(console.log(data))
+          .catch(console.error)
       }, []);
     
       return(
