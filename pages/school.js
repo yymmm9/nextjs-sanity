@@ -7,7 +7,8 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useUser } from '@/utils/useUser';
 
-class App extends React.Component{
+function School(){
+    
     state={
         fetchedLessons
     }
