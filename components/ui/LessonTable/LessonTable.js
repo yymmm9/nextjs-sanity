@@ -1,9 +1,15 @@
 import React from 'react'
 
 function LessonTable(props) {
-  const lessonName = props.lessons[0].lessonName
+  const lessonName = props
+  const lesson = props.lessons.title
   return(
-    <p>{lessonName}</p>
+    <div className="LessonTable">
+      {lessonName.map(event => (
+        <p>{event.id}</p>
+      ))}
+      <p>{lessonName}</p>
+    </div>
   )
 }
 
