@@ -24,7 +24,6 @@ export default function School(){
     // }
 
     render(){
-        // const {fetchedLessons} = this.state
 
         return(
 
@@ -32,8 +31,6 @@ export default function School(){
                 <section>
                     <h1>Start your journey</h1>
                     <h2></h2>
-
-                   {/* <LessonTable lessons={fetchedLessons} /> */}
 
                 </section>
             </main>
