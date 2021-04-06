@@ -3,10 +3,17 @@ import sanityClient from '@/utils/client.js';
 import React, { useState, useEffect } from 'react';
 
 import { useRouter } from 'next/router';
+import { useUser } from '@/utils/useUser';
+
 
 const School = () => {
     const [postData, setPostData] = useState(null);
     const router = useRouter();
+    const { userLoaded, user, session, userDetails, subscription } = useUser();
+
+    useEffect(() => {
+    if (!user) router.replace('/signin');
+    }, [user]);
     
       useEffect(()=>{
           sanityClient.fetch(`*[_type == "post"]{
