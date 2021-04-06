@@ -17,6 +17,7 @@ const createCheckoutSession = async (req, res) => {
 
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
+        payment_method_types: ['alipay'],
         billing_address_collection: 'required',
         customer,
         line_items: [
